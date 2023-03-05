@@ -11,7 +11,7 @@ public class Zumbi {
 
      boolean tranfereVida(Zumbi zumbialvo, double quantia){
 
-         if(quantia > vida){
+         if(quantia < vida){
              vida -= quantia;
              zumbialvo.vida += quantia;
 
