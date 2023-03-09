@@ -33,5 +33,8 @@ public class Main2 {
             System.out.println("Não foi possivel transferir...");
         }
 
+        // fechamento do Scanner de entrada de dados
+        entrada.close();
+
     }
 }

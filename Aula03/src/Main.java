@@ -17,5 +17,8 @@ public class Main {
         // chama o metodo que mostra o nome e vida do zumbi
         zumbi.statusDoZumbi();
 
+        // fechamento do Scanner de entrada de dados
+        entrada.close();
+
     }
 }
