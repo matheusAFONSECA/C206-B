@@ -1,9 +1,43 @@
+import java.util.Objects;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         // declaração de var e instanciação de objetos
-        Kart kart= new Kart();
+        Kart kart1 = new Kart();    // kart1
+        Kart kart2 = new Kart();    // kart2
 
-        kart.motor.cilindradas = "50";
+        Piloto p1 = new Piloto();   // piloto 1
+        Piloto p2 = new Piloto();   // piloto 2
+
+        // definindo o Scanner de entrada de dados
+        Scanner entrada = new Scanner(System.in);
+
+        // Piloto 1 será um vilão e o Piloto 2 não
+        p1.vilao = true;
+        System.out.println("Qual o nome do vilão? ");
+        p1.nome = entrada.nextLine();
+
+        p2.vilao = false;
+        System.out.println("Qual o nome do herói? ");
+        p2.nome = entrada.nextLine();
+
+        // definindo qual kart cada um irá dirigir
+        kart1.piloto = p1;
+        kart2.piloto = p2;
+
+        // definindo as especificações do motor
+        System.out.println("Quantas cilindradas tem o motor do " + p1.nome + ":");
+        kart1.motor.cilindradas = entrada.nextLine();
+        if(!Objects.equals(kart1.motor.cilindradas, "50")){
+            if(!Objects.equals(kart1.motor.cilindradas, "100")){
+                if(!Objects.equals(kart1.motor.cilindradas, "150")){
+                    System.out.println("Valor de cilindradas inválido, entre novamente com o valor: ");
+                    kart1.motor.cilindradas = entrada.nextLine();
+                }
+            }
+        }
+
 
     }
 }
