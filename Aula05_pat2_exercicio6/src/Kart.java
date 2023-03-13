@@ -7,10 +7,32 @@ public class Kart {
     */
 
     // declaração de var
-    Motor motor;  // instanciando o acesso à classe Motor
+    String nome;    // nome do Kart
+    Motor motor;    // instanciando o acesso à classe Motor
     Piloto piloto;  // utilizando o valores, da classe Piloto, que foram atrelados a classe Motor
 
-    public Kart(){
+    // métodos da Classe Kart
+    public Kart(){      // congregação da classe Motor na classe Kart
         motor = new Motor();
     }
+
+    void pula(){        // faz o Kart pular
+
+        System.out.println("O kart pulou!!!");
+
+    }
+
+    void soltarTurbo(){  // solta o turbo do Kart
+
+        System.out.println("Soltando o Turbo!!!!");
+
+    }
+
+    void fazerDrift(){   // Faz o Kart fazer Drift
+
+        System.out.println("O Kart está fazendo Drift!!!");
+
+    }
+
+
 }
