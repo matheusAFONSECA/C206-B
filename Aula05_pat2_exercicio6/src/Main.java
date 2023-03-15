@@ -10,6 +10,10 @@ public class Main {
         Piloto p1 = new Piloto();   // piloto 1
         Piloto p2 = new Piloto();   // piloto 2
 
+        // corelacionando o kart com o piloto
+        kart1.piloto = p1;
+        kart2.piloto = p2;
+
         // definindo o Scanner de entrada de dados
         Scanner entrada = new Scanner(System.in);
 
