@@ -10,7 +10,6 @@ public class Main {
 
         boolean flag = true;    // flag de controle do while
         int var;                // var aux
-        int i = 0;              // controle
 
         // declaração de Scanner
         Scanner entrada = new Scanner(System.in);
@@ -21,28 +20,26 @@ public class Main {
             System.out.println("1 - ADICIONAR UM SALGADO À CANTINA");
             System.out.println("2 - VER OS SALGADOS DISPONÍVEIS");
             System.out.println("3 - SAIR DO SISTEMA");
-            var = entrada.nextInt();
+            var = entrada.nextInt();    // entrada de uma var aux
 
-            switch (var){
-                case 1:
+            switch (var) {
+                case 1 -> {     // adicionar um salgado ao sistema
                     entrada.nextLine();
                     System.out.println("Fale o nome do salgado: ");
-                    Salgado salgado = new Salgado();
+                    Salgado salgado = new Salgado();    // instanciando um tipo de salgado
                     salgado.nome = entrada.nextLine();
-                    cantina.addSalgado(salgado);
-                    i++;
-                    break;
-                case 2:
-                    cantina.mostraInfo();
-                    break;
-                case 3:
+                    cantina.addSalgado(salgado);        // adicionando o salgado na cantina
+                }
+                case 2 -> cantina.mostraInfo();     // mostrar as informações do cardapio
+                case 3 -> {     // caso deseje sair do sistema
                     System.out.println("Obrigado por utilizar o sistema, até mais!");
                     flag = false;
-                    break;
-                default:
-                    System.out.println("Entre com um número válido!!!!");
-                    break;
+                }
+                default -> System.out.println("Entre com um número válido!!!!");
             }
         }
+
+        // fechamento do Scanner de entrada de dados
+        entrada.close();
     }
 }
