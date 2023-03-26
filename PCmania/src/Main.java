@@ -51,7 +51,7 @@ public class Main {
         // adicionando uma memoria USB
         memoriaUSB.nome = "Pend-drive";
         memoriaUSB.capacidade = 32;
-        computadors[0].addMemoriaUSB(memoriaUSB);
+        computadors[1].addMemoriaUSB(memoriaUSB);
 
         // declarando as configurações do computador da Vaio -> opção 3
         computadors[2] = new Computador();
@@ -71,13 +71,13 @@ public class Main {
         // adicionando uma memoria USB
         memoriaUSB.nome = "HD Externo";
         memoriaUSB.capacidade = 1000;
-        computadors[0].addMemoriaUSB(memoriaUSB);
+        computadors[2].addMemoriaUSB(memoriaUSB);
 
         // agora começa a parte do menu do usuário
         // var auxilixares
         boolean flag = true;       // flag de controle do menu
-        float precoTotal;          // preco total de compra do cliente
         int op;                    // operação que o cliente quer fazer
+        int j = 0;                 // contador
 
         // declarando um Scanner
         Scanner entrada = new Scanner(System.in);
@@ -110,6 +110,12 @@ public class Main {
                     System.out.println("1 - Positivo - R$2300,00");
                     System.out.println("2 - Acer - R$5800,00");
                     System.out.println("3 - Vaio - R$1800,00");
+                    op = entrada.nextInt();
+
+                    // definindo os computadores comprados
+                    cliente.computadorsComprados[j] = computadors[op-1];
+                    j++;
+
                     break;
 
                 case 2:     // ver as configurações dos Computadores
@@ -121,6 +127,52 @@ public class Main {
             }
 
         }
+
+        // var aux
+        int positivo = 0;   // quantidade de computadores Positivo comprados
+        int acer = 0;       // quantidade de computadores Acer comprados
+        int vaio = 0;       // quantidade de computadores Vaio comprados
+
+        // mostrando as informações do cliente
+        System.out.println("INFORMAÇÕES DO CLIENTE:");
+        System.out.println("NOME: " + cliente.nome);
+        System.out.println("CPF: " + cliente.cpf);
+
+        // mostrando os resulados da compra
+        System.out.println("AQUI ESTÃO OS RESULTADOS DA SUA COMPRA:");
+        System.out.println("TOTAL: R$ " + cliente.calculaTotalCompra());         // mostra o total da compra
+
+        System.out.println("COMPUTADORES COMPRADOS: ");
+        for (int i = 0; i < cliente.computadorsComprados.length; i++){           // mostra quantos comprou de cada marca
+            if (cliente.computadorsComprados[i] != null){
+                if (cliente.computadorsComprados[i].marca.equals("Positivo")){
+                    positivo++;
+                }
+                if (cliente.computadorsComprados[i].marca.equals("Acer")){
+                    acer++;
+                }
+                if (cliente.computadorsComprados[i].marca.equals("Vaio")){
+                    vaio++;
+                }
+            }
+        }
+        if (positivo != 0){
+            System.out.println("* " + positivo + " Positivo(s)");
+        }
+        if (acer != 0){
+            System.out.println("* " + acer + " Acer(s)");
+        }
+        if (vaio != 0){
+            System.out.println("* " + vaio + " Vaio(s)");
+        }
+        if ((positivo == 0) && (acer == 0) && (vaio == 0)){
+            System.out.println("* NENHUMA COMPRA REALIZADA");
+        }
+
+        if ((positivo != 0) || (acer != 0) || (vaio != 0)){
+            System.out.println("OBRIGADO POR COMPRAR CONOSCO!!!");
+        }
+        System.out.println("UM ABRAÇO DO PESSOAL DA PC MANIA!!!");
 
         // fechando o Scanner
         entrada.close();
