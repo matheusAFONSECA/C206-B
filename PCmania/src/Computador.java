@@ -10,20 +10,33 @@ public class Computador {
 
     // classes que tem relação de congregação
     SistemaOperacional sop;     // sistema operacional do computador
-    HardwareBasico hdb;         // hardware básico do computador
+    HardwareBasico[] hdb;         // hardware básico do computador
+
+    // classe que tem relação de agregação
+    MemoriaUSB memoriaUSB = new MemoriaUSB();   // memoria externa que acompanha o computador
 
     public Computador(){
         sop = new SistemaOperacional();
-        hdb = new HardwareBasico();
+        hdb = new HardwareBasico[5];
     }
 
     // metodos
     public void mostraPCConfigs(){      // mostra as configurações do PC
 
+        System.out.println("CONFIGURAÇÕES DO COMPUTADOR: " + marca);
+        System.out.println("PREÇO: R$" + preco);
+        System.out.println("HARDWARE: ");
+        for (int i = 0; i < hdb.length; i++){
+            if (hdb[i] != null){
+                System.out.println(hdb[i].nome + " - " + hdb[i].capacidade);
+            }
+        }
+        System.out.println("SISTEMA OPERACIONAL: " + sop.nome + " - " + sop.tipo);
+        System.out.println("ACOMPANHA: " + memoriaUSB.nome + " - " + memoriaUSB.capacidade);
     }
 
     public void addMemoriaUSB(MemoriaUSB musb){     // adiciona a memoria USB extra
-
+        memoriaUSB = musb;
     }
 
 }
