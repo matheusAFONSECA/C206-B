@@ -27,12 +27,16 @@ public class Computador {
         System.out.println("PREÇO: R$" + preco);
         System.out.println("HARDWARE: ");
         for (int i = 0; i < hdb.length; i++){
-            if (hdb[i] != null){
-                System.out.println(hdb[i].nome + " - " + hdb[i].capacidade);
+            if (hdb[i] != null) {
+                if (hdb[i].nome.equals("Pentium Core i5") || hdb[i].nome.equals("Pentium Core i3") || hdb[i].nome.equals("Pentium Core i7")) {
+                    System.out.println("\t" + hdb[i].nome + " - " + hdb[i].capacidade + " Mhz");
+                } else {
+                    System.out.println("\t" + hdb[i].nome + " - " + hdb[i].capacidade + " Gb");
+                }
             }
         }
-        System.out.println("SISTEMA OPERACIONAL: " + sop.nome + " - " + sop.tipo);
-        System.out.println("ACOMPANHA: " + memoriaUSB.nome + " - " + memoriaUSB.capacidade);
+        System.out.println("SISTEMA OPERACIONAL: " + sop.nome + " - " + sop.tipo + " bits");
+        System.out.println("ACOMPANHA: " + memoriaUSB.nome + " - " + memoriaUSB.capacidade + " Gb");
         System.out.println("---------------------------------------------------");
     }
 
