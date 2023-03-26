@@ -33,6 +33,7 @@ public class Computador {
         }
         System.out.println("SISTEMA OPERACIONAL: " + sop.nome + " - " + sop.tipo);
         System.out.println("ACOMPANHA: " + memoriaUSB.nome + " - " + memoriaUSB.capacidade);
+        System.out.println("---------------------------------------------------");
     }
 
     public void addMemoriaUSB(MemoriaUSB musb){     // adiciona a memoria USB extra
