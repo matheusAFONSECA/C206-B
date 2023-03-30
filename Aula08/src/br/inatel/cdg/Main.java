@@ -19,6 +19,13 @@ public class Main {
     public static void main(String[] args) {
         // Aula sobre a criação de pacotes e as boas práticas ao se criar pacotes
         // pacote são pastas criadas no projeto
-        
+        Matematica ma1 = new Matematica();
+
+        // usando o setter
+        ma1.setSaldo(1000);
+
+        // usando o getter
+        ma1.getSaldo();
+
     }
 }
