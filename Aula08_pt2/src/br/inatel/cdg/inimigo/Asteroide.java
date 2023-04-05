@@ -15,6 +15,8 @@ public class Asteroide {
     // metodo
     public void destruir(){     // faz o asteroide ser destruido
 
+        System.out.println("O asteroide foi destruido");
+
     }
 
     // getter e setter

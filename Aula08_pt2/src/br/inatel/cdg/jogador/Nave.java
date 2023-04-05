@@ -1,4 +1,5 @@
 package br.inatel.cdg.jogador;
+import br.inatel.cdg.inimigo.Asteroide;
 
 public class Nave {
     // classe que guarda os atributos e metodos do objeto Nave
@@ -15,7 +16,22 @@ public class Nave {
     }
 
     // metodo
-    public void atirar(){       // faz a nave atirar no asteroide
+    public void atirar(Asteroide ast){       // faz a nave atirar no asteroide
+
+        /*
+        * Caso o asteroide seja do tipo grande e a nave não tenha a um tipo de tiro
+        explosivo não ocorre a destruição do asteroide
+        */
+        if (ast.getTipoAsteroide().equals("GRANDE")) {
+            if (tipoTiro.equals("EXPLOSIVO")) {
+                ast.destruir();
+            }
+            if (tipoTiro.equals("NORMAL")) {
+                System.out.println("Não é possivel destruir esse asteroide");
+            }
+        } else {
+            ast.destruir();
+        }
 
     }
 
