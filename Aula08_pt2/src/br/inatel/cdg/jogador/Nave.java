@@ -18,4 +18,29 @@ public class Nave {
     public void atirar(){       // faz a nave atirar no asteroide
 
     }
+
+    // getter e setter
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public double getVida() {
+        return vida;
+    }
+
+    public void setVida(double vida) {
+        this.vida = vida;
+    }
+
+    public String getTipoTiro() {
+        return tipoTiro;
+    }
+
+    public void setTipoTiro(String tipoTiro) {
+        this.tipoTiro = tipoTiro;
+    }
 }
