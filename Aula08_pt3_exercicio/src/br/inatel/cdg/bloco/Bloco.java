@@ -2,8 +2,8 @@ package br.inatel.cdg.bloco;
 
 public class Bloco {
     // Código que simula a lógica de um bloco no jogo Arkanoid
-    int blocos;                 // blocos que existem no momento
-    int blocosDestruidos;       // blocos destruidos
+    public int blocos;                 // blocos que existem no momento
+    public int blocosDestruidos;       // blocos destruidos
 
     // metodos
     public void destruirBlocos(){   // destroi os blocos
