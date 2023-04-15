@@ -4,5 +4,5 @@ public class Brownie {
     protected double preco;     // preco do brownie
     protected String saber;     // sabor que o brownie tem
 
-    // 
+    //
 }
