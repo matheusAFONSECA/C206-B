@@ -6,7 +6,10 @@ public class BrownieNutella extends Brownie{
 
     // metodos
     public void adicionaNutella(){      // adiciona nutella no brownie
-
+        System.out.println("ADICIONOU MAIS NUTELLA!!!!!");
+        System.out.println("PRECO SUBIU R$ 2,00");
+        setPreco(getPreco() + 2);
+        System.out.println("------------------------------");
     }
 
     @Override

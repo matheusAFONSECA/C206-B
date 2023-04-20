@@ -6,7 +6,10 @@ public class BrownieCafe extends Brownie{
 
     // metodos
     public void adicionaCafe(){         // adiciona cafe no Brownie
-
+        System.out.println("ADICIONOU MAIS CAFE!!!!!");
+        System.out.println("PRECO SUBIU R$ 3,00");
+        setPreco(getPreco() + 3);
+        System.out.println("------------------------------");
     }
 
     @Override

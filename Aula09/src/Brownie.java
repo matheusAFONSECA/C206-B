@@ -5,10 +5,10 @@ public class Brownie {
     protected String nome;      // nome do tipo de brownie
     protected double preco;     // preco do brownie
     protected String sabor;     // sabor que o brownie tem
-    double soma = 0;            // var aux
-    int cafe = 0;
-    int nutella = 0;
-    int doce = 0;
+    static double soma;            // var aux
+    static int cafe;
+    static int nutella;
+    static int doce;
 
     // construtor
     public Brownie(String nome, double preco, String sabor) {
@@ -27,14 +27,31 @@ public class Brownie {
             nutella++;
         }
 
+        System.out.println("BROWNIE ADICIONADO COM SUCESSO");
+
+        System.out.println("BROWNIES NO CARRINHO: ");
+        if (cafe != 0){
+            System.out.println("\tCAFE: " + cafe);
+        }
+        if (nutella != 0){
+            System.out.println("\tNUTELLA: " + nutella);
+        }
+        if (doce != 0){
+            System.out.println("\tDOCE DE LEITE: " + doce);
+        }
+
+        System.out.println("----------------------------------");
     }
 
     public void calculaValorTotalCompra(){  // calcula o valor da compra
         soma = getPreco() + soma;
+        System.out.println("VALOR DA COMPRA: " + soma);
+
+        System.out.println("----------------------------------");
     }
 
     public void mostraInfo(){               // mostra as informações dos brownies
-        System.out.println("\tNOME:" + getNome());
+        System.out.println("\tNOME: " + getNome());
         System.out.println("\tPREÇO: " + getPreco());
         System.out.println("\tSABOR: " + getSabor());
     }
