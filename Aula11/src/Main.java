@@ -8,6 +8,7 @@ public class Main {
         Lontra lontra = new Lontra("VIVI", 19);
         lontra.mostraInfo();
         lontra.emitirSom();
+        lontra.nadar();
 
         Boi boi = new Boi("ZE", 15);
         boi.mostraInfo();

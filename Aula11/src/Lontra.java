@@ -1,4 +1,4 @@
-public class Lontra extends Mamifero{
+public class Lontra extends Mamifero implements Aquatico{
 
     // construtor
     public Lontra(String nome, double vida) {
@@ -20,4 +20,12 @@ public class Lontra extends Mamifero{
         System.out.println("---------------------------");
 
     }
+    @Override
+    public void nadar() {
+
+        System.out.println(getNome() + " ESTÁ NADANDO!!!!");
+        System.out.println("---------------------------");
+
+    }
+
 }
