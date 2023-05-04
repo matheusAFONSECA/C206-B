@@ -24,7 +24,6 @@ public class Main {
         // ordenando o ArrayList de forma decrescente
         Collections.sort(listaDouble, Collections.reverseOrder());
         System.out.println("Depois da ordenação decrescente");
-        System.out.println("Antes da ordenação: ");
         for(Double double1 : listaDouble){
             System.out.println("\t" + double1);
         }
