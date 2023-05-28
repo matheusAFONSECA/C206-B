@@ -1,7 +1,12 @@
+import java.util.ArrayList;
+
 public class Usuario {
     // Atributos
     private String nome;        // nome do Usuario da Rede Social
     private String email;       // email do Usuario da Rede Social
+
+    // Array de Redes Sociais
+    ArrayList<RedeSocial> redeSociais = new ArrayList<>();
 
     // construtor
     public Usuario(String nome, String email) {
