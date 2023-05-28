@@ -6,7 +6,7 @@ public class Usuario {
     private String email;       // email do Usuario da Rede Social
 
     // Array de Redes Sociais
-    ArrayList<RedeSocial> redeSociais = new ArrayList<>();
+    ArrayList<RedeSocial> redeSociaisUsuario = new ArrayList<>();
 
     // construtor
     public Usuario(String nome, String email) {
@@ -16,7 +16,10 @@ public class Usuario {
 
     // metodos
     public void Usuario(RedeSocial[] redeSociais){      // adiciona as Redes Sociais do Usuario
-
+        // Iterando sobre o array de redes sociais
+        for (RedeSocial s: redeSociais) {
+            redeSociaisUsuario.add(s);
+        }
     }
 
     // getters e setters
